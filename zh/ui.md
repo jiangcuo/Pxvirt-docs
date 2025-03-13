@@ -4,9 +4,9 @@ PXVIRT主要增加了以下功能
 
 ## 1. 虚拟机的架构选择
 
-![位于创建虚拟机](img/arch1.png)
+![位于创建虚拟机](img/arch1.png#pic_center =600x)
     
-![位于虚拟选项卡](img/arch2.png)
+![位于虚拟选项卡](img/arch2.png#pic_center =600x)
     
 本功能可以调整虚拟机的架构，比如从x86_64架构转换到aarch64架构。
 
@@ -19,7 +19,7 @@ PXVIRT主要增加了以下功能
 ## 2. 虚拟机的CPU选择
 
 在CPU这里，我们加入了基本上支持的CPU类型。
-![](img/ui3.png)
+![](img/ui3.png#pic_center =600x)
 
 下面是CPU的型号说明
 |vendor|所属架构|
@@ -69,7 +69,7 @@ QEMU只有Max 和host是通用类型。也就是max基本上所有的架构都�
 
 在虚拟的磁盘处，我们增加了NVME的模拟，用户可以直接添加nvme磁盘。
 
-![](img/ui4.png)
+![](img/ui4.png#pic_center =600x)
 
 
 >提示
@@ -94,7 +94,7 @@ QEMU只有Max 和host是通用类型。也就是max基本上所有的架构都�
 
 启动之后，搭配vGPU效果如下
 
-![alt text](img/ui5.png)
+![alt text](img/ui5.png#pic_center =600x)
 
 设备管理器里面，只会有vGPU显卡，实现更好的软件兼容性。
 
@@ -106,11 +106,11 @@ QEMU只有Max 和host是通用类型。也就是max基本上所有的架构都�
 
 当你添加vGPU的时候，会显示一个`Ramfb Display`的选项。
 
-![alt text](img/ui6.png)
+![alt text](img/ui6.png#pic_center =600x)
 
 这个选项将开启vfio-pci的`ramfb`功能，使用这个功能，可以在搭配了vGPU设备的虚拟机中，启用bios画面显示。
 
-![alt text](img/ui7.png)
+![alt text](img/ui7.png#pic_center =600x)
 
 如果没有开启这个功能，那么虚拟机启动后将会一直黑屏，直到显卡被驱动。因此我们建议使用这个选项。
 

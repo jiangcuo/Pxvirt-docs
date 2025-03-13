@@ -1,6 +1,6 @@
 # PXVIRT 
 
-![](img/logo.png)
+![](img/logo.png#pic_center =600x)
 
 PXVIRT是Proxmox VE的一个变体，由[梨儿方](https://www.lierfang.com)进行开发和维护。
 
