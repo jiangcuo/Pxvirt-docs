@@ -2,11 +2,11 @@
 
 PXVIRT主要增加了以下功能
 
-## 1. 虚拟机的架构选择
+#  虚拟机的架构选择
 
-![位于创建虚拟机](img/arch1.png#pic_center)
+![位于创建虚拟机](/img/arch1.png#pic_center)
     
-![位于虚拟选项卡](img/arch2.png#pic_center)
+![位于虚拟选项卡](/img/arch2.png#pic_center)
     
 本功能可以调整虚拟机的架构，比如从x86_64架构转换到aarch64架构。
 
@@ -16,12 +16,13 @@ PXVIRT主要增加了以下功能
 >
 >调整架构之后，虚拟机的配置也要变化，比如CPU型号、主板型号等。不然无法开机。
 
-## 2. 虚拟机的CPU选择
+# 虚拟机的CPU选择
 
 在CPU这里，我们加入了基本上支持的CPU类型。
-![](img/ui3.png#pic_center)
+![](/img/ui3.png#pic_center)
 
 下面是CPU的型号说明
+
 |vendor|所属架构|
 |---|---|
 |RISCV|riscv64架构所需要的CPU类型|
@@ -42,7 +43,7 @@ QEMU只有Max 和host是通用类型。也就是max基本上所有的架构都�
 |aarch64|aarch64|host、max、Kunpeng-920|Kunpeng920只能鲲鹏主机使用，否则会报错|
 |loongarch64|loongarch64|la464、max|龙芯当前实现了la464的模拟，La664是不支持的，所以不支持host启动|
 
-## 3. 虚拟机的BIOS选择
+# 虚拟机的BIOS选择
 
 虚拟机须使用正确的bios，才能正常引导启动。当然这不是绝对，如果你好奇这功能，可以研究一下，在CLI处我们会提到。
 
@@ -54,29 +55,31 @@ QEMU只有Max 和host是通用类型。也就是max基本上所有的架构都�
 |ppc64|seabios|
 |s390x|seabios|
 
-## 4. 虚拟机的机型选择
+# 虚拟机的机型选择
 
 虚拟机必须使用正确的机型，才能正常引导启动。
+
 |虚拟机架构|虚拟机机型|
 |---|---|
 |x86_64|q35,i440fx|
 |arm64|virt|
 |loongarch64|virt|
+|riscv64|virt|
 |ppc64|pseries|
 |s390x|s390-ccw-virtio|
 
-## 5. NVME 模拟
+# NVME 模拟
 
 在虚拟的磁盘处，我们增加了NVME的模拟，用户可以直接添加nvme磁盘。
 
-![](img/ui4.png#pic_center)
+![](/img/ui4.png#pic_center)
 
 
 >提示
 >
 >好奇NVME的性能吗？我们经过测试，在高并发下nvme比scsi好点，但是日常使用没有性能区别，但是对于Windows来讲，nvme设备就不需要安装scsi驱动了。
 
-## 6. GPU选择
+# GPU选择
 
 我们添加了2种额外的GPU设备。
 
@@ -94,7 +97,7 @@ QEMU只有Max 和host是通用类型。也就是max基本上所有的架构都�
 
 启动之后，搭配vGPU效果如下
 
-![alt text](img/ui5.png#pic_center)
+![alt text](/img/ui5.png#pic_center)
 
 设备管理器里面，只会有vGPU显卡，实现更好的软件兼容性。
 
@@ -102,15 +105,15 @@ QEMU只有Max 和host是通用类型。也就是max基本上所有的架构都�
 >
 >先别急着用，Mdev和下面的功能搭配更好
 
-## 7. Mdev的ramfb显示
+# Mdev的ramfb显示
 
 当你添加vGPU的时候，会显示一个`Ramfb Display`的选项。
 
-![alt text](img/ui6.png#pic_center)
+![alt text](/img/ui6.png#pic_center)
 
 这个选项将开启vfio-pci的`ramfb`功能，使用这个功能，可以在搭配了vGPU设备的虚拟机中，启用bios画面显示。
 
-![alt text](img/ui7.png#pic_center)
+![alt text](/img/ui7.png#pic_center)
 
 如果没有开启这个功能，那么虚拟机启动后将会一直黑屏，直到显卡被驱动。因此我们建议使用这个选项。
 
