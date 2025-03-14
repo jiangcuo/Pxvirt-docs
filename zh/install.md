@@ -59,7 +59,7 @@ sudo dd if=/path/to/pxvirt.iso of=/dev/diskXsX bs=1M status=progress
 开机的时候，选择U盘启动，这时您会进入我们的安装页面
 
 
-![alt text](img/install1.png#pic_center =600x)
+![alt text](img/install1.png#pic_center)
 
 这里我们列出所有的菜单说明
 
@@ -116,7 +116,7 @@ PXVIRT的启动路径(不区分大小写)为
 3. 按e
 4. 在`linux`行的后面，加上`earlycon=ttyS0`如下图
 
-![alt text](img/install2.png#pic_center =600x)
+![alt text](img/install2.png#pic_center)
 5. `ctrl + x`进行启动。之后您可以通过串口或者sol控制台查看到debug信息。
 
 
@@ -144,7 +144,7 @@ PXVIRT的启动路径(不区分大小写)为
 
 这样就可以骗过安装程序，认为当前系统有网卡，如下图
 
-![alt text](img/install3.png#pic_center =600x)
+![alt text](img/install3.png#pic_center)
 
 但您必须清楚，这只是能够安装，重新启动之后，仍会没有网络。
 

@@ -85,3 +85,5 @@ PXVIRT默认将scsi2作为光驱，但是Windows没有默认的scsi驱动，会�
 之后就和正常安装Windows没区别了
 
 ![alt text](img/setup14.png#pic_center)
+
+当然你需要下载kvm的驱动，才能正常的驱动一些硬件，例如网卡，串口等硬件。请参考资源下载部分
