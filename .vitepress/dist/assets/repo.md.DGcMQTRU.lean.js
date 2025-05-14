@@ -1,0 +1,1 @@
+import{_ as s,c as e,o as a,ah as t}from"./chunks/framework.HzbgFGQH.js";const g=JSON.parse('{"title":"软件仓库","description":"","frontmatter":{},"headers":[],"relativePath":"repo.md","filePath":"repo.md"}'),l={name:"repo.md"};function p(o,i,d,n,r,h){return a(),e("div",null,i[0]||(i[0]=[t("",19)]))}const k=s(l,[["render",p]]);export{g as __pageData,k as default};

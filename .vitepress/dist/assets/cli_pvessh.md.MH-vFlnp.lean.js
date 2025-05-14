@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as n,ah as p}from"./chunks/framework.HzbgFGQH.js";const _=JSON.parse('{"title":"pvessh","description":"","frontmatter":{},"headers":[],"relativePath":"cli/pvessh.md","filePath":"cli/pvessh.md"}'),i={name:"cli/pvessh.md"};function t(l,s,r,c,h,o){return n(),e("div",null,s[0]||(s[0]=[p("",6)]))}const v=a(i,[["render",t]]);export{_ as __pageData,v as default};

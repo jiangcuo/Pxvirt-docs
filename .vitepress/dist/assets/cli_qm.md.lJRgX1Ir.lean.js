@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as t,ah as n}from"./chunks/framework.HzbgFGQH.js";const o=JSON.parse('{"title":"qm","description":"","frontmatter":{},"headers":[],"relativePath":"cli/qm.md","filePath":"cli/qm.md"}'),e={name:"cli/qm.md"};function p(h,s,l,d,k,r){return t(),a("div",null,s[0]||(s[0]=[n("",76)]))}const F=i(e,[["render",p]]);export{o as __pageData,F as default};

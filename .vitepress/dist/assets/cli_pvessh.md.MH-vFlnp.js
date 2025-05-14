@@ -1,0 +1,7 @@
+import{_ as a,c as e,o as n,ah as p}from"./chunks/framework.HzbgFGQH.js";const _=JSON.parse('{"title":"pvessh","description":"","frontmatter":{},"headers":[],"relativePath":"cli/pvessh.md","filePath":"cli/pvessh.md"}'),i={name:"cli/pvessh.md"};function t(l,s,r,c,h,o){return n(),e("div",null,s[0]||(s[0]=[p(`<h1 id="pvessh" tabindex="-1">pvessh <a class="header-anchor" href="#pvessh" aria-label="Permalink to “pvessh”">​</a></h1><p><code>pvessh</code>是一个集群批量ssh的工具</p><p>例如</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>root@amd1:~# pvessh uname -r</span></span>
+<span class="line"><span>Hosts: 10.13.16.249 10.13.16.244 10.13.16.245</span></span>
+<span class="line"><span>Command: uname -r</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>10.13.16.249 : 6.8.4-2-pve</span></span>
+<span class="line"><span>10.13.16.244 : 6.1.43-15-rk2312</span></span>
+<span class="line"><span>10.13.16.245 : 6.6.0-6-openeuler</span></span></code></pre></div><p>该工具会遍历集群在线的节点，并发起ssh控制，类似ansible的shell指令.但我们集成在了pxvirt中，比ansible更加轻量化。</p><p>使用<code>pvessh -h</code> 可以查看更多的帮助</p>`,6)]))}const v=a(i,[["render",t]]);export{_ as __pageData,v as default};

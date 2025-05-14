@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as t,ah as i}from"./chunks/framework.HzbgFGQH.js";const f=JSON.parse('{"title":"资源下载","description":"","frontmatter":{},"headers":[],"relativePath":"resources.md","filePath":"resources.md"}'),o={name:"resources.md"};function s(n,r,l,d,c,p){return t(),a("div",null,r[0]||(r[0]=[i("",7)]))}const _=e(o,[["render",s]]);export{f as __pageData,_ as default};

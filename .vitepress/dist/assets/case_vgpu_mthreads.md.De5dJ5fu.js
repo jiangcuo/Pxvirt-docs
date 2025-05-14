@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.HzbgFGQH.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"case/vgpu/mthreads.md","filePath":"case/vgpu/mthreads.md"}'),s={name:"case/vgpu/mthreads.md"};function r(c,o,n,d,p,m){return a(),t("div")}const f=e(s,[["render",r]]);export{i as __pageData,f as default};

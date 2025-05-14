@@ -1,10 +1,13 @@
 {
+  "name": "pxvirt-docs",
+  "version": "1.0.0",
+  "description": "PXVIRT Documentation",
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
   "dependencies": {
-    "vitepress": "^2.0.0-alpha.4"
+    "vitepress": "^1.0.0-rc.31"
   }
 }
