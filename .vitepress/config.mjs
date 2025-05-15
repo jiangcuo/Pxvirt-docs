@@ -36,7 +36,7 @@ const zhSidebar = [
         items: [
           { text: '在x86上安装windows', link: '/zh/setup/Windows-on-x86' },
           { text: '在arm64/龙芯上安装Linux', link: '/zh/setup/Linux-on-port' },
-          { text: '从 Proxmox VE 迁移', link: '/zh/setup/migrate-from-pve' },
+          { text: '从 Proxmox VE 迁移', link: '/zh/setup/Migrating-from-pve' },
         ]
       },
       { text: '资源下载', link: '/zh/resources' },
@@ -91,7 +91,7 @@ const enSidebar = [
         items: [
           { text: 'Installing Windows on x86', link: '/en/setup/Windows-on-x86' },
           { text: 'Installing Linux on ARM64/Loongson', link: '/en/setup/Linux-on-port' },
-          { text: 'Migrate from Proxmox VE', link: '/en/setup/migrate-from-pve' }
+          { text: 'Migrate from Proxmox VE', link: '/en/setup/Migrating-from-pve' }
         ]
       },
       { text: 'Resources Download', link: '/en/resources' },
@@ -146,7 +146,7 @@ const jaSidebar = [
         items: [
           { text: 'x86でWindowsをインストール', link: '/ja/setup/Windows-on-x86' },
           { text: 'ARM64/Loongsonにlinuxをインストール', link: '/ja/setup/Linux-on-port' },
-          { text: 'Proxmox VEから移行', link: '/ja/setup/migrate-from-pve' }
+          { text: 'Proxmox VEから移行', link: '/ja/setup/Migrating-from-pve' }
         ]
       },
       { text: 'リソースダウンロード', link: '/ja/resources' },
