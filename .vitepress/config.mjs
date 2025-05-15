@@ -35,7 +35,8 @@ const zhSidebar = [
       { text: '初次使用',
         items: [
           { text: '在x86上安装windows', link: '/zh/setup/Windows-on-x86' },
-          { text: '在arm64/龙芯上安装Linux', link: '/zh/setup/Linux-on-port' }
+          { text: '在arm64/龙芯上安装Linux', link: '/zh/setup/Linux-on-port' },
+          { text: '从 Proxmox VE 迁移', link: '/zh/setup/migrate-from-pve' },
         ]
       },
       { text: '资源下载', link: '/zh/resources' },
@@ -65,7 +66,7 @@ const zhSidebar = [
           {text: '2. 运维', link: '/zh/case/ceph/maintenance'},
         ]
       },
-      { text: 'vGPU', 
+      { text: 'vGPU',
         items: [
           {text: '1. Nvidia vGPU', link: '/zh/case/vgpu/nvgpu'},
           {text: '2. 摩尔线程 vGPU', link: '/zh/case/vgpu/mthreads'},
@@ -89,7 +90,8 @@ const enSidebar = [
       { text: 'First Time Setup',
         items: [
           { text: 'Installing Windows on x86', link: '/en/setup/Windows-on-x86' },
-          { text: 'Installing Linux on ARM64/Loongson', link: '/en/setup/Linux-on-port' }
+          { text: 'Installing Linux on ARM64/Loongson', link: '/en/setup/Linux-on-port' },
+          { text: 'Migrate from Proxmox VE', link: '/en/setup/migrate-from-pve' }
         ]
       },
       { text: 'Resources Download', link: '/en/resources' },
@@ -119,7 +121,7 @@ const enSidebar = [
           {text: '2. Maintenance', link: '/en/case/ceph/maintenance'},
         ]
       },
-      { text: 'vGPU', 
+      { text: 'vGPU',
         items: [
           {text: '1. Nvidia vGPU', link: '/en/case/vgpu/nvgpu'},
           {text: '2. Moore Threads vGPU', link: '/en/case/vgpu/mthreads'},
@@ -143,7 +145,8 @@ const jaSidebar = [
       { text: '初めての使用',
         items: [
           { text: 'x86でWindowsをインストール', link: '/ja/setup/Windows-on-x86' },
-          { text: 'ARM64/Loongsonにlinuxをインストール', link: '/ja/setup/Linux-on-port' }
+          { text: 'ARM64/Loongsonにlinuxをインストール', link: '/ja/setup/Linux-on-port' },
+          { text: 'Proxmox VEから移行', link: '/ja/setup/migrate-from-pve' }
         ]
       },
       { text: 'リソースダウンロード', link: '/ja/resources' },
@@ -173,7 +176,7 @@ const jaSidebar = [
           {text: '2. メンテナンス', link: '/ja/case/ceph/maintenance'},
         ]
       },
-      { text: 'vGPU', 
+      { text: 'vGPU',
         items: [
           {text: '1. Nvidia vGPU', link: '/ja/case/vgpu/nvgpu'},
           {text: '2. Moore Threads vGPU', link: '/ja/case/vgpu/mthreads'},
@@ -189,7 +192,7 @@ export default defineConfig({
   description: "梨儿方 文档中心",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: zhNav(),
+    nav: zhNav,
     search: {
       provider: 'local'
     },
@@ -209,7 +212,7 @@ export default defineConfig({
     },
     en: {
       label: 'English',
-      lang: 'en', 
+      lang: 'en',
       link: '/en/README',
       themeConfig: {
         nav: enNav,
