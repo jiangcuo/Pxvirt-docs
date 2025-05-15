@@ -1,6 +1,6 @@
 # PXVIRT 
 
-![](../img/logo.png#pic_center)
+![](/img/logo.png#pic_center)
 
 PXVIRT is a variant of Proxmox VE, developed and maintained by [Lierfang](https://www.lierfang.com).
 

@@ -1,73 +1,75 @@
-点击 创建虚拟机按钮。
+# Installing Windows on x86
 
-输入对应的Arch。
+Click the Create Virtual Machine button.
 
-# General环节
+Enter the corresponding architecture.
+
+# General Section
 ![alt text](/img/setup2.png#pic_center)
 
-# OS环节
+# OS Section
 
 ![alt text](/img/setup3.png#pic_center)
 
-# System环节
+# System Section
 
 ![alt text](/img/setup4.png#pic_center)
 
->注意，我们这里勾选了Pre-Enroll Keys（安全启动） 和添加了TPM设备
+>Note that we have checked Pre-Enroll Keys (Secure Boot) and added a TPM device
 >
->这是因为最新的Windows11需要tpm和安全启动。如果是linux，请不要勾选Pre-Enroll Keys（安全启动）
+>This is because the latest Windows 11 requires TPM and Secure Boot. For Linux, please do not check Pre-Enroll Keys (Secure Boot)
 
-# Disks环节
+# Disks Section
 ![alt text](/img/setup5.png#pic_center)
 
->这里我们选择NVME 作为磁盘，因为NVME基本上是免驱的。
+>Here we select NVME as the disk, because NVME is essentially driver-free.
 >
->为什么要免驱，我们会在以后的文档中介绍
+>We will explain why driver-free is important in future documentation
 
-# CPU环节
+# CPU Section
 ![alt text](/img/setup6.png#pic_center)
 
-随后我们一直下一步就行。
+Then we simply continue with Next Step.
 
-# 修改光驱
-分离光驱，将光驱改成IDE2。
+# Modifying the Optical Drive
+Detach the optical drive and change it to IDE2.
 
-PXVIRT默认将scsi2作为光驱，但是Windows没有默认的scsi驱动，会导致iso不能被识别，因此我们需要将光驱改成IDE2。
+PXVIRT defaults to using scsi2 as the optical drive, but Windows doesn't have default SCSI drivers, which means the ISO won't be recognized. Therefore, we need to change the optical drive to IDE2.
 
 ![alt text](/img/setup8.png#pic_center)
 
-先选中scsi2，再点remove。之后我们再点击添加，选择`cdrom`
+First select scsi2, then click remove. After that, click Add and select `cdrom`
 
 ![alt text](/img/setup9.png#pic_center)
 
-随后选择IDE，选择ISO即可
+Then select IDE and choose the ISO
 
 ![alt text](/img/setup10.png#pic_center)
 
-# 调整启动顺序
+# Adjusting Boot Order
 
 ![alt text](/img/setup11.png#pic_center)
 
-在`Options`中，选择`Boot Order`，把刚才添加的`IDE2`移到最上面就好。意思为第一启动项为`IDE2`，也就是我们的iso。
+In `Options`, select `Boot Order`, and move the `IDE2` we just added to the top. This means the first boot device is `IDE2`, which is our ISO.
 
-这时候就可以对虚拟机进行开机了。
+Now you can start the virtual machine.
 
-# 开机
+# Starting the VM
 
-当虚拟机开机时，出现Press any key时一定要按一下
+When the virtual machine starts, make sure to press a key when you see "Press any key"
 
 ![alt text](/img/setup7.png#pic_center)
 
-如果不按的话，就会出现如下的报错
+If you don't press a key, you'll see the following error
 
 ![alt text](/img/setup12.png#pic_center)
 
-请务必按一下，如果没按，请重置一下虚拟机即可。参考下面的按钮
+Be sure to press a key. If you missed it, simply reset the virtual machine. Refer to the button below
 
 ![alt text](/img/setup13.png#pic_center)
 
-之后就和正常安装Windows没区别了
+After that, it's no different from a normal Windows installation
 
 ![alt text](/img/setup14.png#pic_center)
 
-当然你需要下载kvm的驱动，才能正常的驱动一些硬件，例如网卡，串口等硬件。请参考资源下载部分
+Of course, you'll need to download KVM drivers to properly support some hardware, such as network cards, serial ports, and other devices. Please refer to the Resources Download section
