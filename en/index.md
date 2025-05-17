@@ -7,7 +7,7 @@ hero:
   text: Document Center
   tagline: Data Center Virtualization Solutions
   image:
-    src: ../img/logo.png
+    src: /img/logo.png
     alt: PXVIRT Logo
   actions:
     - theme: brand

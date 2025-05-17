@@ -63,7 +63,7 @@ Insert the USB drive into your server or PC. For PCs, insert it into the motherb
 
 During bootup, select USB boot, and you will enter our installation page.
 
-![alt text](../img/install1.png#pic_center)
+![alt text](/img/install1.png#pic_center)
 
 Here is an explanation of all menu items:
 
@@ -119,7 +119,7 @@ If your machine has a serial port, you can:
 3. Press 'e'
 4. Add `earlycon=ttyS0` at the end of the `linux` line, as shown below
 
-![alt text](../img/install2.png#pic_center)
+![alt text](/img/install2.png#pic_center)
 5. Press `ctrl + x` to boot. You can then view debug information through the serial port or SOL console.
 
 ## ***no device with valid ISO found, please check your installation medium***
@@ -146,7 +146,7 @@ If you need to force installation, after step 4, execute the following command t
 
 This will trick the installation program into thinking the system has a network card, as shown below:
 
-![alt text](../img/install3.png#pic_center)
+![alt text](/img/install3.png#pic_center)
 
 But be aware that this only allows installation. After restarting, you will still have no network.
 

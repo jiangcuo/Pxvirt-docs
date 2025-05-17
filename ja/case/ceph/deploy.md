@@ -27,11 +27,11 @@
 
 我们使用HDD来节省成本，使用U.2作为缓存盘
 
-<img src="../../..../img/ceph3.png" width="600"/>
+<img src="../../../img/ceph3.png" width="600"/>
 
 缓存盘对于全HDD的ceph场景性能提升巨大。原理如下图所示
 
-<img src="../../..../img/ceph5.png" width="600"/>
+<img src="../../../img/ceph5.png" width="600"/>
 
 上图使用一块7.68T的 nvme 分割成3部分，4T分区作为bcache。
 
@@ -79,7 +79,7 @@ wal的大小通常没什么要求。有个20-30G就足够了。
 
 ## 三、网络架构
 
-![alt text](../../..../img/ceph1.png)
+![alt text](../../../img/ceph1.png)
 
 ::: info
 在最佳实践中，ceph交换机应该做主备，在本case中，因为项目条件限制，所以单台。
@@ -93,7 +93,7 @@ wal的大小通常没什么要求。有个20-30G就足够了。
 可以看下面的逻辑，vmbrX 和交换机 只是充当一个纯流量交换设备。 网桥上的流量管理由通过SDN来控制。
 
 
-<img src="../../..../img/ceph4.png" width="600"/>
+<img src="../../../img/ceph4.png" width="600"/>
 
 
 
@@ -131,7 +131,7 @@ port trunk permit vlan all
 
 服务器自带2口10G SFP+网口，因此可以和PCIE的SP333 互组linux bond。
 
-<img src="../../..../img/ceph2.png" width="200"/>
+<img src="../../../img/ceph2.png" width="200"/>
 
 这2个bond仅做集群流量使用 下面是PVE的网络配置示例
 
@@ -365,13 +365,13 @@ sequential_cutoff: 4.0M => 16.0M
 
 我们可以在网页上，添加OSD
 
-![alt text](../../..../img/ceph6.png)
+![alt text](../../../img/ceph6.png)
 
 磁盘选择bcache，DB disk选择我们的磁盘分区，注意这里的DB SIZE需要指定。我们是600G空间做db，8个硬盘，差不多每个硬盘75G，这里我们设置为73。
 
 Wal Disk 选择WAL分区，size 我们指定为23G
 
-![alt text](../../..../img/ceph7.png)
+![alt text](../../../img/ceph7.png)
 
 耐心等待即可创建成功。
 
@@ -384,7 +384,7 @@ done
 ```
 
 这样一个节点的ceph就创建好了
-![alt text](../../..../img/ceph8.png)
+![alt text](../../../img/ceph8.png)
 
 现在我们将上面的步骤，在其他的节点上执行
 
@@ -393,12 +393,12 @@ done
 
 在PVE的网页上，添加至少半数以上的节点，以保证服务的稳定运行。
 
-![alt text](../../..../img/ceph9.png)
+![alt text](../../../img/ceph9.png)
 
 
 ## 九、创建Ceph 池用于存放虚拟机磁盘
 
-![alt text](../../..../img/ceph10.png)
+![alt text](../../../img/ceph10.png)
 
 只要取个名字，就可以了。默认是3副本策略，最小副本数是2，即在有节点或者osd掉线时，如果副本数低于2，则集群会被冻结。
 
@@ -407,11 +407,11 @@ done
 
 cephfs 是文件类型存储，可以存放iso镜像
 
-![alt text](../../..../img/ceph11.png)
+![alt text](../../../img/ceph11.png)
 
 直接创建半数以上的mds服务器，随后创建一个cephfs类型的池即可。
 
-![alt text](../../..../img/ceph12.png)
+![alt text](../../../img/ceph12.png)
 
 ## 十一、配置NTP服务器
 

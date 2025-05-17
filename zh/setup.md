@@ -6,7 +6,7 @@
 
 你可以点击`local`,导航到`ISO images`,有个`upload`按钮即可上传iso文件
 
-![alt text](../img/setup1.png#pic_center)
+![alt text](/img/setup1.png#pic_center)
 
 # 创建第一个虚拟机
 

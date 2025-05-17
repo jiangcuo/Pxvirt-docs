@@ -7,7 +7,7 @@ hero:
   text: 梨儿方 文档中心
   tagline: 虚拟化解决方案
   image:
-    src: ../img/logo.png
+    src: /img/logo.png
     alt: PXVIRT Logo
   actions:
     - theme: brand
