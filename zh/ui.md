@@ -79,6 +79,10 @@ QEMU只有Max 和host是通用类型。也就是max基本上所有的架构都�
 >
 >好奇NVME的性能吗？我们经过测试，在高并发下nvme比scsi好点，但是日常使用没有性能区别，但是对于Windows来讲，nvme设备就不需要安装scsi驱动了。
 
+>注意
+>
+>NVME 目前不支持在线迁移！
+
 # GPU选择
 
 我们添加了2种额外的GPU设备。
@@ -116,4 +120,9 @@ QEMU只有Max 和host是通用类型。也就是max基本上所有的架构都�
 ![alt text](/img/ui7.png#pic_center)
 
 如果没有开启这个功能，那么虚拟机启动后将会一直黑屏，直到显卡被驱动。因此我们建议使用这个选项。
+
+# 网卡Sriov的支持
+
+我们提供了一个sriov-net-tools，可以快捷开启网卡sriov。我们在UI对网卡 SRIOV进行了增强。当你选择一个SRIOV网卡设备时，你可以在`高级`中配置sriov的mac 和 vlan。固定mac可以防止mac地址变化，在dhcp环境中非常有效。而设置vlan可以更方便的组网。
+
 

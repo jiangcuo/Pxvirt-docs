@@ -79,6 +79,12 @@ For virtual disks, we have added NVMe simulation, allowing users to directly add
 >
 >Curious about NVMe performance? We've conducted tests and found that under high concurrency, NVMe performs slightly better than SCSI. However, there's no noticeable performance difference in daily use. For Windows, NVMe devices don't require SCSI driver installation.
 
+
+>Note!
+>
+>NVME does not currently support live migration!
+
+
 ## GPU Models
 
 We have added two additional GPU models:
@@ -116,3 +122,9 @@ This option will enable the 'ramfb' function of vfio-pci. By using this function
 ![alt text](/img/ui7.png#pic_center)
 
 If this function is not enabled, the virtual machine will remain black after starting up until the graphics card driver is loaded. Therefore, we recommend using this option.
+
+# NetCard Sriov
+
+We provide a sriov-net-tools, which can  enable the network card sriov easily. We have enhanced the network card SRIOV in the UI. 
+
+When you select a SRIOV network card device on `PCI selector`, you can configure the mac and vlan of sriov in `Advanced`. Fixed mac can prevent mac address changes, which is very effective in dhcp environment. Setting vlan can make networking more convenient.
