@@ -60,7 +60,7 @@ const zhSidebar = [
   },{
     text: '三 案例',
     items: [
-      { text: 'Ceph',
+      { text: 'Ceph',link: '/zh/case/ceph',
         items: [
           {text: '1. 部署', link: '/zh/case/ceph/deploy'},
           {text: '2. 运维', link: '/zh/case/ceph/maintenance'},
@@ -72,6 +72,7 @@ const zhSidebar = [
           {text: '2. 摩尔线程 vGPU', link: '/zh/case/vgpu/mthreads'},
         ]
       },
+      { text: 'eNFS', link: '/zh/case/enfs'},
     ]
   }
 ]
@@ -115,7 +116,7 @@ const enSidebar = [
   },{
     text: '3. Use Cases',
     items: [
-      { text: 'Ceph',
+      { text: 'Ceph',link: '/en/case/ceph',
         items: [
           {text: '1. Deployment', link: '/en/case/ceph/deploy'},
           {text: '2. Maintenance', link: '/en/case/ceph/maintenance'},
@@ -127,6 +128,7 @@ const enSidebar = [
           {text: '2. Moore Threads vGPU', link: '/en/case/vgpu/mthreads'},
         ]
       },
+      { text: 'eNFS', link: '/en/case/enfs'},
     ]
   }
 ]
@@ -170,7 +172,7 @@ const jaSidebar = [
   },{
     text: '3. ユースケース',
     items: [
-      { text: 'Ceph',
+      { text: 'Ceph',link: '/ja/case/ceph',
         items: [
           {text: '1. デプロイメント', link: '/ja/case/ceph/deploy'},
           {text: '2. メンテナンス', link: '/ja/case/ceph/maintenance'},
@@ -182,6 +184,7 @@ const jaSidebar = [
           {text: '2. Moore Threads vGPU', link: '/ja/case/vgpu/mthreads'},
         ]
       },
+      { text: 'eNFS', link: '/ja/case/enfs'},
     ]
   }
 ]
