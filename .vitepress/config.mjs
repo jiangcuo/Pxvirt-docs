@@ -73,6 +73,7 @@ const zhSidebar = [
         ]
       },
       { text: 'eNFS', link: '/zh/case/enfs'},
+      { text: 'SPDK', link: '/zh/case/spdk'},
     ]
   }
 ]
@@ -129,6 +130,7 @@ const enSidebar = [
         ]
       },
       { text: 'eNFS', link: '/en/case/enfs'},
+      { text: 'SPDK', link: '/en/case/spdk'},
     ]
   }
 ]
@@ -185,6 +187,7 @@ const jaSidebar = [
         ]
       },
       { text: 'eNFS', link: '/ja/case/enfs'},
+      { text: 'SPDK', link: '/ja/case/spdk'},
     ]
   }
 ]
