@@ -4,21 +4,21 @@ import { defineConfig } from 'vitepress'
 const zhNav = [
   { text: '首页', link: '/zh/' },
   { text: '梨儿方', link: 'https://www.lierfang.com' },
-  { text: 'PXVDI文档', link: 'https://docs.pvdi.lierfang.com' },
+  { text: 'PXVDI文档', link: 'https://docs.pxvdi.lierfang.com' },
 ]
 
 // 英文导航栏
 const enNav = [
   { text: 'Home', link: '/en/' },
   { text: 'Lierfang', link: 'https://www.lierfang.com' },
-  { text: 'PXVDI Docs', link: 'https://docs.pvdi.lierfang.com' },
+  { text: 'PXVDI Docs', link: 'https://docs.pxvdi.lierfang.com' },
 ]
 
 // 日文导航栏
 const jaNav = [
   { text: 'ホーム', link: '/ja/' },
   { text: 'リアファン', link: 'https://www.lierfang.com' },
-  { text: 'PXVDI ドキュメント', link: 'https://docs.pvdi.lierfang.com' },
+  { text: 'PXVDI ドキュメント', link: 'https://docs.pxvdi.lierfang.com' },
 ]
 
 // 中文侧边栏
