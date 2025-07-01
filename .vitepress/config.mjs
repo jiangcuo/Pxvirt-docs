@@ -117,7 +117,7 @@ const enSidebar = [
   },{
     text: '3. Use Cases',
     items: [
-      { text: 'Ceph',link: '/en/case/ceph',
+      { text: 'Ceph',
         items: [
           {text: '1. Deployment', link: '/en/case/ceph/deploy'},
           {text: '2. Maintenance', link: '/en/case/ceph/maintenance'},
@@ -174,7 +174,7 @@ const jaSidebar = [
   },{
     text: '3. ユースケース',
     items: [
-      { text: 'Ceph',link: '/ja/case/ceph',
+      { text: 'Ceph',
         items: [
           {text: '1. デプロイメント', link: '/ja/case/ceph/deploy'},
           {text: '2. メンテナンス', link: '/ja/case/ceph/maintenance'},
@@ -210,7 +210,7 @@ export default defineConfig({
     root: {
       label: '简体中文',
       lang: 'zh-CN',
-      link: '/zh/README',
+      link: '/zh/',
       themeConfig: {
         nav: zhNav,
         sidebar: zhSidebar
@@ -219,7 +219,7 @@ export default defineConfig({
     en: {
       label: 'English',
       lang: 'en',
-      link: '/en/README',
+      link: '/en/',
       themeConfig: {
         nav: enNav,
         sidebar: enSidebar
@@ -228,7 +228,7 @@ export default defineConfig({
     ja: {
       label: '日本語',
       lang: 'ja',
-      link: '/ja/README',
+      link: '/ja/',
       themeConfig: {
         nav: jaNav,
         sidebar: jaSidebar
