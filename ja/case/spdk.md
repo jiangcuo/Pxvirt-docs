@@ -13,6 +13,7 @@ SPDKはストレージアクセラレーションフレームワークです。Q
 1. SPDKディスクが存在する場合、仮想マシンはスナップショットやライブマイグレーションができません。
 2. SPDKディスクはオンライン拡張ができません
 3. 仮想マシンのシャットダウン時にspdk bdevが正しくクリーンアップされない場合、ディスクが削除できない可能性があります。
+4. 大きなページメモリを予約する必要があります。そのため、メモリが少ないマシンではメモリの無駄遣いになります。これはアーキテクチャの要件であり、SPDKを使用するための前提条件です。
 
 ## バージョン要件
 
@@ -49,6 +50,8 @@ Core count: 11
 
 `pxvirt-spdk`ソフトウェアパッケージをインストールすると、デフォルトでgrub設定ファイル`/etc/default/grub.d/spdk.cfg`が作成されます
 
+このファイルがない場合（ISOからインストールした場合など）、このファイルを直接作成し、以下の内容を使用できます。
+
 内容は以下のようになります：
 ```bash
 cat /etc/default/grub.d/spdk.cfg
@@ -60,6 +63,16 @@ GRUB_CMDLINE_LINUX="hugepagesz=2M hugepages=2048 intel_iommu=on iommu=pt amd_iom
 注意！ヒュージページを有効にすると、この部分は完全に専有されるため、システムの利用可能メモリが減少します。メモリが十分でない場合は、2Gメモリのヒュージページを有効にすれば十分です。
 
 変更後、`update-grub`で更新します。再起動後に有効になります
+
+systemd-bootで起動している場合（ZFSをシステムディスクとして使用している場合など）、`hugepagesz=2M hugepages=2048 intel_iommu=on iommu=pt amd_iommu=on`を`/etc/kernel/cmdline`の同じ行の末尾に追加してください。
+
+以下のように：
+```bash
+root@gpu2:~# cat /etc/kernel/cmdline 
+root=ZFS=rpool/ROOT/pve-1 boot=zfs   intel_iommu=on hugepagesz=2M hugepages=2048 intel_iommu=on iommu=pt amd_iommu=on
+```
+
+最後に`proxmox-boot-tool refresh`を実行してブートローダーを更新します。
 
 ## PXVIRTでSPDKディスクを使用する
 

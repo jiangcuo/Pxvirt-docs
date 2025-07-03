@@ -28,6 +28,10 @@ const zhSidebar = [
     link: '/zh/README'
   },
   {
+    text: '更新日志',
+    link: '/zh/roadmap'
+  },
+  {
     text: '一 基本使用',
     items: [
       { text: '介绍', link: '/zh/README'},
@@ -85,6 +89,10 @@ const enSidebar = [
     link: '/en/README'
   },
   {
+    text: 'Roadmap',
+    link: '/en/roadmap'
+  },
+  {
     text: '1. Basic Usage',
     items: [
       { text: 'Introduction', link: '/en/README'},
@@ -140,6 +148,10 @@ const jaSidebar = [
   {
     text: '紹介',
     link: '/ja/README'
+  },
+  {
+    text: 'ロードマップ',
+    link: '/ja/roadmap'
   },
   {
     text: '1. 基本的な使用方法',

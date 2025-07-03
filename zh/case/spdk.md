@@ -15,6 +15,7 @@ SPDK 是一个存储加速框架。在Qemu应用上，主要利用vhost 来缩�
 1. 存在spdk磁盘时，虚拟机无法快照、在线迁移。
 2. spdk磁盘无法在线扩容
 3. 如果虚拟机关机时，spdk bdev没有正确清理，磁盘可能无法被删除。
+4. 需要一定的保留内存作为大页。因此在小内存机器上比较浪费内存。这是架构要求，也是使用spdk的前提条件。
 
 
 ## 版本要求
@@ -54,6 +55,8 @@ Core count: 11
 
 `pxvirt-spdk`软件包安装后，会默认创建一个grub配置文件`/etc/default/grub.d/spdk.cfg`
 
+如果没有这个文件，如从iso安装，你可以直接创建这个文件，并且使用下面的内容。
+
 内容是这样的
 ```bash
 cat /etc/default/grub.d/spdk.cfg
@@ -65,6 +68,16 @@ GRUB_CMDLINE_LINUX="hugepagesz=2M hugepages=2048 intel_iommu=on iommu=pt amd_iom
 注意！启用大页之后，这部分会被完全独占，因此你会看到系统的可用内存减少了。如果内存不够大，启用2G内存的大页就可行了。
 
 修改之后`update-grub`进行更新。重启生效
+
+如果你是通过systemd-boot启动，如zfs作为系统盘，那么请将`hugepagesz=2M hugepages=2048 intel_iommu=on iommu=pt amd_iommu=on` 添加到`/etc/kernel/cmdline` 同行的末尾。
+
+如下
+```
+root@gpu2:~# cat /etc/kernel/cmdline 
+root=ZFS=rpool/ROOT/pve-1 boot=zfs   intel_iommu=on hugepagesz=2M hugepages=2048 intel_iommu=on iommu=pt amd_iommu=on
+```
+
+最后执行`proxmox-boot-tool refresh` 更新引导
 
 ## 在PXVIRT 中使用SPDK磁盘
 

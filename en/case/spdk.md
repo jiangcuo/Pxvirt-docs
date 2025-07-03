@@ -13,6 +13,7 @@ Main components include:
 1. When SPDK disks are present, virtual machines cannot snapshot or perform live migration.
 2. SPDK disks cannot be expanded online
 3. If spdk bdev is not properly cleaned up when the virtual machine shuts down, the disk may not be deletable.
+4. Requires reserved memory as huge pages. This wastes memory on low-memory machines. This is an architectural requirement and a prerequisite for using SPDK.
 
 ## Version Requirements
 
@@ -49,6 +50,8 @@ Core count: 11
 
 After installing the `pxvirt-spdk` software package, it will create a default grub configuration file `/etc/default/grub.d/spdk.cfg`
 
+If this file doesn't exist, such as when installing from ISO, you can directly create this file and use the content below.
+
 The content looks like this:
 ```bash
 cat /etc/default/grub.d/spdk.cfg
@@ -60,6 +63,16 @@ We only need to modify the `hugepages=2048` value. The final huge page size is `
 Note! After enabling huge pages, this portion will be completely reserved, so you will see the system's available memory decrease. If memory is not sufficient, enabling 2G of huge pages should be adequate.
 
 After modification, run `update-grub` to update. Changes take effect after reboot.
+
+If you boot via systemd-boot, such as when using ZFS as the system disk, please add `hugepagesz=2M hugepages=2048 intel_iommu=on iommu=pt amd_iommu=on` to the end of the same line in `/etc/kernel/cmdline`.
+
+As shown below:
+```
+root@gpu2:~# cat /etc/kernel/cmdline 
+root=ZFS=rpool/ROOT/pve-1 boot=zfs   intel_iommu=on hugepagesz=2M hugepages=2048 intel_iommu=on iommu=pt amd_iommu=on
+```
+
+Finally, execute `proxmox-boot-tool refresh` to update the bootloader.
 
 ## Using SPDK Disks in PXVIRT
 
