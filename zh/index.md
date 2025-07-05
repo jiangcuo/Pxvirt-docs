@@ -16,9 +16,6 @@ hero:
     - theme: alt
       text: English Docs
       link: /en/README
-    - theme: alt
-      text: 日本語ドキュメント
-      link: /ja/README
 ---
 <!-- 
 
