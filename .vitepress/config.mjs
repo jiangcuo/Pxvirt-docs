@@ -35,7 +35,13 @@ const zhSidebar = [
     text: '一 基本使用',
     items: [
       { text: '介绍', link: '/zh/README'},
-      { text: '安装帮助', link: '/zh/install' },
+      { text: '硬件要求', link: '/zh/hardware'},
+      { text: '安装帮助',
+        items: [
+          { text: '从ISO安装', link: '/zh/install' },
+          { text: '从debian安装', link: '/zh/installfromdebian' },
+        ]
+      },
       { text: '初次使用',
         items: [
           { text: '在x86上安装windows', link: '/zh/setup/Windows-on-x86' },
@@ -96,7 +102,13 @@ const enSidebar = [
     text: '1. Basic Usage',
     items: [
       { text: 'Introduction', link: '/en/README'},
-      { text: 'Installation Guide', link: '/en/install' },
+      { text: 'Hardware Requirements', link: '/en/hardware' },
+      { text: 'Installation Guide',
+        items: [
+          { text: 'Install from ISO', link: '/en/install' },
+          { text: 'Install from Debian', link: '/en/installfromdebian' },
+        ]
+      },
       { text: 'First Time Setup',
         items: [
           { text: 'Installing Windows on x86', link: '/en/setup/Windows-on-x86' },
@@ -157,7 +169,13 @@ const jaSidebar = [
     text: '1. 基本的な使用方法',
     items: [
       { text: '紹介', link: '/ja/README'},
-      { text: 'インストールヘルプ', link: '/ja/install' },
+      { text: 'ハードウェア要件', link: '/ja/hardware' },
+      { text: 'インストールヘルプ',
+        items: [
+          { text: 'ISOからインストール', link: '/ja/install' },
+          { text: 'Debianからインストール', link: '/ja/install_from_debian' },
+        ]
+      },
       { text: '初めての使用',
         items: [
           { text: 'x86でWindowsをインストール', link: '/ja/setup/Windows-on-x86' },
@@ -235,15 +253,6 @@ export default defineConfig({
       themeConfig: {
         nav: enNav,
         sidebar: enSidebar
-      }
-    },
-    ja: {
-      label: '日本語',
-      lang: 'ja',
-      link: '/ja/',
-      themeConfig: {
-        nav: jaNav,
-        sidebar: jaSidebar
       }
     }
   },
