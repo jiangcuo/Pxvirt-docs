@@ -84,6 +84,13 @@ const zhSidebar = [
       },
       { text: 'eNFS', link: '/zh/case/enfs'},
       { text: 'SPDK', link: '/zh/case/spdk'},
+      { text: 'Issues',
+        items: [
+          {text: 'rockchip', link: '/zh/case/issue/rockchip'},
+          {text: 'raspberrypi', link: '/zh/case/issue/raspberrypi'},
+          {text: 'passthrough', link: '/zh/case/issue/passthrough'},
+        ]
+      },
     ]
   }
 ]
@@ -151,6 +158,13 @@ const enSidebar = [
       },
       { text: 'eNFS', link: '/en/case/enfs'},
       { text: 'SPDK', link: '/en/case/spdk'},
+      { text: 'Issues',
+        items: [
+          {text: 'rockchip', link: '/en/case/issue/rockchip'},
+          {text: 'raspberrypi', link: '/en/case/issue/raspberrypi'},
+          {text: 'passthrough', link: '/en/case/issue/passthrough'},
+        ]
+      },
     ]
   }
 ]
