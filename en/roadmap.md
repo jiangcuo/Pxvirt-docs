@@ -10,7 +10,7 @@ TODO:
     - Extended Features
         - [ ] NFS cluster based on CephFS
         - [ ] NVMeOF distributed storage extension based on Ceph
-4. [ ] RISC-V 64 version based on Debian 13
+4. [x] RISC-V 64 version based on Debian 13 
 
 Release Notes:
 --------------

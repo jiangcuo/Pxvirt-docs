@@ -10,7 +10,7 @@ TODO:
     - 扩展功能
         - [ ] 基于cephfs的nfs集群
         - [ ] 基于ceph的NvmeOF分布式存储扩展
-4. [ ] 基于debian 13的Riscv64 版本
+4. [x] 基于debian 13的Riscv64 版本
 
 
 Release Notes:

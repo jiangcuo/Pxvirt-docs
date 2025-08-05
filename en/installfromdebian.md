@@ -60,6 +60,7 @@ Then execute the commands
 ```bash
 apt update
 apt install ifupdown2 -y
+rm /etc/network/interfaces.new
 ```
 
 Configure static IP using ifupdown2. You can check your network interface using `ip link show`
@@ -75,8 +76,8 @@ root@nas:~# ip link show
 Assuming the network interface is `enp5s0f0`
 
 ```bash
-# Edit /etc/network/interfaces.d/enp5s0f0.conf
-nano /etc/network/interfaces.d/enp5s0f0.conf
+# Edit /etc/network/interfaces
+nano /etc/network/interfaces
 # Enter the following information
 auto enp5s0f0
 iface enp5s0f0 inet static
@@ -84,13 +85,17 @@ iface enp5s0f0 inet static
       gateway 10.13.14.254
 
 ```
+::: danger reload network
+If your network configuration is incorrect, a restart may prevent remote access. Ensure that you have connected a monitor or a serial cable.
+:::
+
 Then restart the machine to ensure the network is properly applied. If the network configuration is incorrect, it might cause installation interruption due to network disconnection, making the machine inaccessible remotely.
 
 ## Install PXVIRT
 
 ```bash
 apt update
-apt install proxmox-ve pve-manager qemu-server pve-cluster 
+apt install proxmox-ve pve-manager qemu-server pve-cluster
 ```
 
 ## Create Network Bridge

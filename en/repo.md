@@ -40,3 +40,10 @@ deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-reef
 ```
 deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
 ```
+
+
+## Proxmox backup server Repositories
+
+```
+deb https://download.lierfang.com/pxcloud/pbs trixie main
+```

@@ -66,6 +66,12 @@ Since PXVIRT is a pure 64-bit software package, you need to switch to arm64 to u
 
 These platforms have some issues, please refer to the case section of the documentation.
 
+## RISCV64 Architecture
+We have released the RISC-V64 version based on Debian 13. You can refer to [Installing PXVIRT from Debian](./installfromdebian.md) to install the RISC-V64 version.
+
+Since most current RISC-V64 SoCs do not support the H extension, KVM hardware acceleration cannot be used, which means QEMU virtual machines cannot be utilized. However, LXC can be used instead.
+
+
 ## Understanding PXVIRT Components
 
 PXVIRT is a derivative branch of Proxmox VE, similar to an application on the Debian operating system, implemented purely in user space.

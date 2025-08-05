@@ -38,3 +38,9 @@ Ceph-17
 ```
 deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
 ```
+
+## Proxmox backup server 仓库
+
+```
+deb https://download.lierfang.com/pxcloud/pbs trixie main
+```

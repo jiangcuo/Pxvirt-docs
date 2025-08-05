@@ -85,3 +85,29 @@ root=ZFS=rpool/ROOT/pve-1 boot=zfs   intel_iommu=on hugepagesz=2M hugepages=2048
 
 如果是初次使用，请务必确保主机应用了大页。如果主机现在没有启用大页，那么需要重启一下的。
 
+## SPDK 优化
+
+SPDK会占用CPU核心，如果QEMU 用到了这个核心，那么将会卡顿，那么我们应该如何避免这种情况呢？当然是隔离CPU
+
+SPDK 单核心处理速度大约是3.2G/s，假设你目前速度在12G/s，那么就要4个核心。
+
+假设隔离0-3核心
+
+```
+echo "GRUB_CMDLINE_LINUX=\"isolcpus=0-3\"" > /etc/default/grub.d/isol.cfg
+update-grub
+```
+
+参考 `cores CPU 掩码配置`设置cpu到0-3
+
+
+## 禁用SPDK
+
+如果你不清楚SPDK，那么请禁用他。
+
+```
+apt autoremove pxvirt-spdk -y
+update-grub
+```
+
+重启服务器即可生效

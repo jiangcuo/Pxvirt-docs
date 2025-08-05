@@ -61,6 +61,7 @@ systemctl stop NetworkManager
 ```bash
 apt update
 apt install ifupdown2 -y
+rm /etc/network/interfaces.new
 ```
 
 使用ifupdown2配置静态ip，可以通过`ip link show`查看你的网卡
@@ -76,8 +77,8 @@ root@nas:~# ip link show
 假设网卡为`enp5s0f0`
 
 ```bash
-# 编辑 /etc/network/interfaces.d/enp5s0f0.conf
-nano /etc/network/interfaces.d/enp5s0f0.conf
+# 编辑 /etc/network/interfaces
+nano /etc/network/interfaces
 # 填入下面的信息
 auto enp5s0f0
 iface enp5s0f0 inet static
@@ -85,6 +86,11 @@ iface enp5s0f0 inet static
       gateway 10.13.14.254
 
 ```
+
+:::danger 重启注意！
+如果你配置不正确，重启之后可能无法通过网络连接，确保你可以通过显示器或者串口控制台等方式连接到服务器
+:::
+
 随后重启机器，确保网络正常应用，如果网络不对，可能会导致安装的过程中断网，无法远程到机器中。
 
 

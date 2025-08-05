@@ -69,6 +69,13 @@ ARM64架构我们分为2类:
 这类平台还有一些issue，请参考文档case的部分。
 
 
+### RISCV 架构
+
+我们发布了RISCV64的版本，基于debian13，你可以参考 [从debian安装](./installfromdebian.md) 安装riscv64版本
+
+由于当前riscv64 大部分soc没有支持H扩展，因此无法使用KVM硬件加速，也就是无法使用qemu虚拟机，当时可以使用LXC.
+
+
 ##  认识PXVIRT 的组成
 
 PXVIRT 是基于Proxmox VE 的一个衍生分支，类似位于debian操作系统上的一个应用，他纯用户态的实现。

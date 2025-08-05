@@ -80,3 +80,31 @@ Simply add a disk on the web interface and select SPDK as the type.
 
 If this is your first time using SPDK, make sure the host has applied huge pages. If the host doesn't currently have huge pages enabled, a reboot will be required.
 
+## SPDK turning
+
+SPDK occupies CPU cores. If QEMU uses these cores, it will cause lag. So how should we avoid this? The answer is certainly to isolate the CPUs.
+
+The processing speed of a single SPDK core is approximately 3.2 G/s. Assuming your current speed is 12 G/s, you will need 4 cores.
+
+Suppose we isolate cores 0 to 3.
+
+```
+echo "GRUB_CMDLINE_LINUX=\"isolcpus=0-3\"" > /etc/default/grub.d/isol.cfg
+update-grub
+```
+
+Configure CPUs `0-3` with reference to the `cores CPU Mask Configuration`
+
+
+## Disable SPDK
+
+
+If you are not familiar with SPDK, please disable it.
+
+```
+apt autoremove pxvirt-spdk -y
+update-grub
+```
+
+
+reboot your machine
