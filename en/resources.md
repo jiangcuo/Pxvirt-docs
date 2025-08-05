@@ -5,7 +5,9 @@
 [Official Website](https://www.lierfang.com)
 
 ## Disk Images
-We provide disk images for common operating systems. You can find them in the [disk images](https://download.lierfang.com/imgs/) section.
+We provide disk images for common operating systems. You can find them in the [disk images](https://mirrors.lierfang.com/pxcloud/pxvirt/system-prebuild-img/) section.
+
+
 
 # PXVIRT ISO
 
