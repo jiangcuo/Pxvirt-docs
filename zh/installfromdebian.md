@@ -5,7 +5,6 @@
 ## 系统要求
 
 - pxvirt 8 -> debian12 bookworm / armbian bookworm
-- pxvirt 9 -> debian13 trixie / armbian trixie
 
 其他的系统 如果是基于debian-bookworm或者trixie也可以安装。
 

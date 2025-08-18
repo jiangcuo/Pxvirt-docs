@@ -2,8 +2,6 @@
 
 PXVIRT 8.3版本使用`debian 12 bookworm`发行。
 
-PXVIRT 9将使用`debian 13 trixie`发行。
-
 软件源GPG签名
 ```
 https://download.lierfang.com/pxcloud/pxvirt/pveport.gpg
@@ -41,6 +39,7 @@ deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
 
 ## Proxmox backup server 仓库
 
+仅支持loongarch64和riscv64两种架构
 ```
 deb https://download.lierfang.com/pxcloud/pbs trixie main
 ```

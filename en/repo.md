@@ -4,8 +4,6 @@ We provide APT repositories for various architectures.
 
 PXVIRT 8 is based on `debian 12 bookworm`.
 
-PXVIRT 9 is based on `debian 13 trixie`.
-
 ## GPG sign key
 ```
 https://download.lierfang.com/pxcloud/pxvirt/pveport.gpg
@@ -44,6 +42,7 @@ deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
 
 ## Proxmox backup server Repositories
 
+RISCV64 AND LOONGARCH64 ONLY
 ```
 deb https://download.lierfang.com/pxcloud/pbs trixie main
 ```

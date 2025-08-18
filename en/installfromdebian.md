@@ -5,9 +5,8 @@ If you cannot install PXVIRT from ISO, you can install it through Debian.
 ## System Requirements
 
 - PXVIRT 8 -> Debian 12 Bookworm / Armbian Bookworm
-- PXVIRT 9 -> Debian 13 Trixie / Armbian Trixie
 
-Other systems based on Debian-Bookworm or Trixie can also be used for installation.
+Other systems based on Debian-Bookworm  can also be used for installation.
 
 Ubuntu is NOT supported!
 
