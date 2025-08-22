@@ -46,3 +46,19 @@ RISCV64 AND LOONGARCH64 ONLY
 ```
 deb https://download.lierfang.com/pxcloud/pbs trixie main
 ```
+
+
+## Repositories Mirrors
+
+
+1. Official Site
+
+    - https://mirrors.lierfang.com
+    - https://de.mirrors.lierfang.com
+    - https://mirrors.apqa.cn
+
+
+2. Community Site
+    
+    - https://apt.dedi.zone/pxcloud/pxvirt
+    - https://mirrors.homelabproject.cc

@@ -43,3 +43,19 @@ deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
 ```
 deb https://download.lierfang.com/pxcloud/pbs trixie main
 ```
+
+
+## 仓库镜像
+
+
+1. 官方镜像
+
+    - https://mirrors.lierfang.com
+    - https://de.mirrors.lierfang.com
+    - https://mirrors.apqa.cn
+
+
+2. 社区镜像
+    
+    - https://apt.dedi.zone/pxcloud/pxvirt
+    - https://mirrors.homelabproject.cc
