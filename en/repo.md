@@ -39,12 +39,27 @@ deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-reef
 deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
 ```
 
-
 ## Proxmox backup server Repositories
 
 RISCV64 AND LOONGARCH64 ONLY
 ```
 deb https://download.lierfang.com/pxcloud/pbs trixie main
+```
+
+## LoongARCH spical debian repo
+
+Since there is no official Debian version of loongarch yet and it only exists in sid, we have frozen it. Our packages are all based on this version, so you need to use our repository instead of the official Debian repository.
+
+pxvirt 8
+
+```
+deb [trusted=yes] https://debianports.mirrors.lierfang.com/bookworm/ sid main
+```
+
+pxvirt 9
+
+```
+deb [trusted=yes] https://debianports.mirrors.lierfang.com/trixie/ sid main
 ```
 
 
@@ -55,8 +70,9 @@ deb https://download.lierfang.com/pxcloud/pbs trixie main
 
     - https://mirrors.lierfang.com
     - https://de.mirrors.lierfang.com
+    - https://jp.mirrors.lierfang.com
+    - https://ah1.cdn.lierfang.com:8000
     - https://mirrors.apqa.cn
-
 
 2. Community Site
     

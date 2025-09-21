@@ -44,6 +44,22 @@ deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
 deb https://download.lierfang.com/pxcloud/pbs trixie main
 ```
 
+## LoongARCH 特殊的debian仓库
+
+因为loongarch 现在还没有debian的正式版本，存在于sid中，我们对其进行了冻结，我们的包都是基于这个版本，因此需要使用我们的仓库debian仓库。
+
+pxvirt 8
+
+```
+deb [trusted=yes] https://debianports.mirrors.lierfang.com/bookworm/ sid main
+```
+
+pxvirt 9
+
+```
+deb [trusted=yes] https://debianports.mirrors.lierfang.com/trixie/ sid main
+```
+
 
 ## 仓库镜像
 
