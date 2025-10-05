@@ -14,7 +14,7 @@ ISO支持的机型。
 
 # 下载ISO文件
 
-下载地址为：https://download.lierfang.com/isos/
+下载地址为：https://mirrors.lierfang.com/pxcloud/pxvirt/isos/
 
 # 刻录iso
 

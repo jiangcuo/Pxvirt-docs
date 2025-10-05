@@ -15,7 +15,7 @@ Loongson 5000 users please use the new-world BIOS
 
 # Download ISO File
 
-Download link: https://download.lierfang.com/isos/
+Download link: https://mirrors.lierfang.com/pxcloud/pxvirt/isos/
 
 # Burning ISO
 
