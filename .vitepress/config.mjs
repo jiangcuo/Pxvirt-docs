@@ -89,6 +89,7 @@ const zhSidebar = [
           {text: 'rockchip', link: '/zh/case/issue/rockchip'},
           {text: 'raspberrypi', link: '/zh/case/issue/raspberrypi'},
           {text: 'passthrough', link: '/zh/case/issue/passthrough'},
+          {text: 'arm32', link: '/zh/case/issue/armhf'},
         ]
       },
     ]
@@ -163,6 +164,7 @@ const enSidebar = [
           {text: 'rockchip', link: '/en/case/issue/rockchip'},
           {text: 'raspberrypi', link: '/en/case/issue/raspberrypi'},
           {text: 'passthrough', link: '/en/case/issue/passthrough'},
+          {text: 'arm 32', link: '/en/case/issue/armhf'},
         ]
       },
     ]
