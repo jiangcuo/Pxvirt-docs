@@ -90,6 +90,7 @@ const zhSidebar = [
           {text: 'raspberrypi', link: '/zh/case/issue/raspberrypi'},
           {text: 'passthrough', link: '/zh/case/issue/passthrough'},
           {text: 'arm32', link: '/zh/case/issue/armhf'},
+          {text: 'ipv6', link: '/zh/case/issue/ipv6'},
         ]
       },
     ]
@@ -165,6 +166,7 @@ const enSidebar = [
           {text: 'raspberrypi', link: '/en/case/issue/raspberrypi'},
           {text: 'passthrough', link: '/en/case/issue/passthrough'},
           {text: 'arm 32', link: '/en/case/issue/armhf'},
+          {text: 'ipv6', link: '/en/case/issue/ipv6'},
         ]
       },
     ]
