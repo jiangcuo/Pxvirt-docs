@@ -1,6 +1,6 @@
 # 资源下载
 ## 下载地址
-[Lierfang Download Center](https://download.lierfang.com/)  
+[Lierfang Download Center](https://mirrors.lierfang.com/)  
 [Official Website](https://www.lierfang.com)
 
 
@@ -9,13 +9,13 @@
 
 # PXVIRT ISO
 
-https://download.lierfang.com/isos/
+https://www.lierfang.com
 
 # PXVIRT VIRTIO-WIN 驱动
 
-https://download.lierfang.com/proxmox/drivers/
+https://mirrors.lierfang.com/pxcloud/pxvirt/virtio-win/
 
 # VirtViwer SPICE查看器
 
-https://download.lierfang.com/pxvdi/Extra/virt-viewer/
+https://mirrors.lierfang.com/pxcloud/pxvdi/Extra/virt-viewer/
 

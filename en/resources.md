@@ -1,7 +1,7 @@
 # Resources Download
 
 ## Download Address
-[Lierfang Download Center](https://download.lierfang.com/)  
+[Lierfang Download Center](https://mirrors.lierfang.com/)  
 [Official Website](https://www.lierfang.com)
 
 ## Disk Images
@@ -11,13 +11,13 @@ We provide disk images for common operating systems. You can find them in the [d
 
 # PXVIRT ISO
 
-https://download.lierfang.com/isos/
+https://www.lierfang.com
 
 # PXVIRT VIRTIO-WIN Drivers
 
-https://download.lierfang.com/proxmox/drivers/
+https://mirrors.lierfang.com/pxcloud/pxvirt/virtio-win/
 
 # VirtViewer SPICE Viewer
 
-https://download.lierfang.com/pxvdi/Extra/virt-viewer/
+https://mirrors.lierfang.com/pxcloud/pxvdi/Extra/virt-viewer/
 

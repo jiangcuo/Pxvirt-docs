@@ -6,44 +6,44 @@ PXVIRT 8 is based on `debian 12 bookworm`.
 
 ## GPG sign key
 ```
-https://download.lierfang.com/pxcloud/pxvirt/pveport.gpg
+https://mirrors.lierfang.com/pxcloud/pxvirt/pveport.gpg
 ```
 
 ## Quick install
 ```
-curl -L https://download.lierfang.com/pxcloud/pxvirt/pveport.gpg -o /etc/apt/trusted.gpg.d/pveport.gpg
+curl -L https://mirrors.lierfang.com/pxcloud/pxvirt/pveport.gpg -o /etc/apt/trusted.gpg.d/pveport.gpg
 ```
 
 ## Repositories:
 
 ### PXVIRT 8 Main Repo
 ```
-deb https://download.lierfang.com/pxcloud/pxvirt bookworm main
+deb https://mirrors.lierfang.com/pxcloud/pxvirt bookworm main
 ```
 
 ### Ceph-19 
 * Supports amd64, arm64, loongARCH64
 ```
-deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-squid 
+deb https://mirrors.lierfang.com/pxcloud/pxvirt bookworm ceph-squid 
 ```
 
 ### Ceph-18
 * Supports amd64, arm64
 ```
-deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-reef 
+deb https://mirrors.lierfang.com/pxcloud/pxvirt bookworm ceph-reef 
 ```
 
 ### Ceph-17
 * Supports amd64
 ```
-deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
+deb https://mirrors.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
 ```
 
 ## Proxmox backup server Repositories
 
 RISCV64 AND LOONGARCH64 ONLY
 ```
-deb https://download.lierfang.com/pxcloud/pbs trixie main
+deb https://mirrors.lierfang.com/pxcloud/pbs trixie main
 ```
 
 ## LoongARCH spical debian repo
@@ -53,13 +53,13 @@ Since there is no official Debian version of loongarch yet and it only exists in
 pxvirt 8
 
 ```
-deb [trusted=yes] https://debianports.mirrors.lierfang.com/bookworm/ sid main
+deb [trusted=yes check-valid-until=no] https://mirrors.lierfang.com/debian-ports/bookworm/ sid main
 ```
 
 pxvirt 9
 
 ```
-deb [trusted=yes] https://debianports.mirrors.lierfang.com/trixie/ sid main
+deb [trusted=yes check-valid-until=no] https://mirrors.lierfang.com/debian-ports/trixie/ sid main
 ```
 
 
@@ -69,10 +69,9 @@ deb [trusted=yes] https://debianports.mirrors.lierfang.com/trixie/ sid main
 1. Official Site
 
     - https://mirrors.lierfang.com
-    - https://de.mirrors.lierfang.com
+    - https://us.mirrors.lierfang.com
     - https://jp.mirrors.lierfang.com
     - https://ah1.cdn.lierfang.com:8000
-    - https://mirrors.apqa.cn
 
 2. Community Site
     

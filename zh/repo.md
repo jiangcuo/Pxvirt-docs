@@ -4,44 +4,44 @@ PXVIRT 8.3版本使用`debian 12 bookworm`发行。
 
 软件源GPG签名
 ```
-https://download.lierfang.com/pxcloud/pxvirt/pveport.gpg
+https://mirrors.lierfang.com/pxcloud/pxvirt/pveport.gpg
 ```
 
 快捷安装签名
 ```
-curl -L https://download.lierfang.com/pxcloud/pxvirt/pveport.gpg -o /etc/apt/trusted.gpg.d/pveport.gpg
+curl -L https://mirrors.lierfang.com/pxcloud/pxvirt/pveport.gpg -o /etc/apt/trusted.gpg.d/pveport.gpg
 ```
 
 软件源如下：
 
 PXVIRT 8 主仓库
 ```
-deb https://download.lierfang.com/pxcloud/pxvirt bookworm main
+deb https://mirrors.lierfang.com/pxcloud/pxvirt bookworm main
 ```
 
 Ceph-19 
 * 支持amd64 arm64 loongARCH64
 ```
-deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-squid 
+deb https://mirrors.lierfang.com/pxcloud/pxvirt bookworm ceph-squid 
 ```
 
 Ceph-18
 * 支持amd64 arm64
 ```
-deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-reef 
+deb https://mirrors.lierfang.com/pxcloud/pxvirt bookworm ceph-reef 
 ```
 
 Ceph-17
 * 支持amd64
 ```
-deb https://download.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
+deb https://mirrors.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
 ```
 
 ## Proxmox backup server 仓库
 
-仅支持loongarch64和riscv64两种架构
+
 ```
-deb https://download.lierfang.com/pxcloud/pbs trixie main
+deb https://mirrors.lierfang.com/pxcloud/pbs trixie main
 ```
 
 ## LoongARCH 特殊的debian仓库
@@ -51,13 +51,13 @@ deb https://download.lierfang.com/pxcloud/pbs trixie main
 pxvirt 8
 
 ```
-deb [trusted=yes] https://debianports.mirrors.lierfang.com/bookworm/ sid main
+deb [trusted=yes check-valid-until=no] https://mirrors.lierfang.com/debian-ports/bookworm/ sid main
 ```
 
 pxvirt 9
 
 ```
-deb [trusted=yes] https://debianports.mirrors.lierfang.com/trixie/ sid main
+deb [trusted=yes check-valid-until=no] https://mirrors.lierfang.com/debian-ports/trixie/ sid main
 ```
 
 
@@ -67,9 +67,9 @@ deb [trusted=yes] https://debianports.mirrors.lierfang.com/trixie/ sid main
 1. 官方镜像
 
     - https://mirrors.lierfang.com
-    - https://de.mirrors.lierfang.com
-    - https://mirrors.apqa.cn
-
+    - https://us.mirrors.lierfang.com
+    - https://jp.mirrors.lierfang.com
+    - https://ah1.cdn.lierfang.com:8000
 
 2. 社区镜像
     
