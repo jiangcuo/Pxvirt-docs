@@ -1,0 +1,63 @@
+# Internal Error in Windows 7 Virtual Machines Caused by hv_vapic
+
+As the title suggests, this issue may occur on Intel 12th Gen CPUs and on Sapphire Rapids / Emerald Rapids server platforms.
+
+## Symptoms
+
+1. Virtual machine
+
+The virtual machine reports an internal error.
+
+2. Logs
+
+Use the following command: `journalctl --since your_time | grep -A 30 "KVM internal error" `
+
+```
+journalctl --since 2026-04-20 | grep -A 30 "KVM internal error" 
+Apr 20 10:33:47 pxvirt QEMU[191514]: KVM internal error. Suberror: 3
+Apr 20 10:33:47 pxvirt QEMU[191514]: extra data[0]: 0x000000008000002f
+Apr 20 10:33:47 pxvirt QEMU[191514]: extra data[1]: 0x0000000000000020
+Apr 20 10:33:47 pxvirt QEMU[191514]: extra data[2]: 0x0000000000000582
+Apr 20 10:33:47 pxvirt QEMU[191514]: extra data[3]: 0x0000000000000008
+Apr 20 10:33:47 pxvirt QEMU[191514]: RAX=0000000000000000 RBX=fffffa800887a010 RCX=0000000040000070 RDX=0000000000000000
+Apr 20 10:33:47 pxvirt QEMU[191514]: RSI=fffff8800499fc00 RDI=0000000000000000 RBP=fffff8800499fa30 RSP=fffff8800499f988
+Apr 20 10:33:47 pxvirt QEMU[191514]: R8 =0000000000000000 R9 =fffff80003df7e80 R10=fffffa8007932b60 R11=0000000000000000
+Apr 20 10:33:47 pxvirt QEMU[191514]: R12=fffffa800887a000 R13=fffff880018dc2c8 R14=0000000000000000 R15=fffff80000b96080
+Apr 20 10:33:47 pxvirt QEMU[191514]: RIP=fffff80003cd122c RFL=00000046 [---Z-P-] CPL=0 II=0 A20=1 SMM=0 HLT=0
+Apr 20 10:33:47 pxvirt QEMU[191514]: ES =002b 0000000000000000 ffffffff 00c0f300 DPL=3 DS   [-WA]
+Apr 20 10:33:47 pxvirt QEMU[191514]: CS =0010 0000000000000000 00000000 00209b00 DPL=0 CS64 [-RA]
+Apr 20 10:33:47 pxvirt QEMU[191514]: SS =0018 0000000000000000 ffffffff 00c09300 DPL=0 DS   [-WA]
+Apr 20 10:33:47 pxvirt QEMU[191514]: DS =002b 0000000000000000 ffffffff 00c0f300 DPL=3 DS   [-WA]
+Apr 20 10:33:47 pxvirt QEMU[191514]: FS =0053 0000000000000000 00003c00 0040f300 DPL=3 DS   [-WA]
+Apr 20 10:33:47 pxvirt QEMU[191514]: GS =002b fffff80003df7d00 ffffffff 00c0f300 DPL=3 DS   [-WA]
+Apr 20 10:33:47 pxvirt QEMU[191514]: LDT=0000 0000000000000000 ffffffff 00c00000
+Apr 20 10:33:47 pxvirt QEMU[191514]: TR =0040 fffff80000b96080 00000067 00008b00 DPL=0 TSS64-busy
+Apr 20 10:33:47 pxvirt QEMU[191514]: GDT=     fffff80000b95000 0000007f
+Apr 20 10:33:47 pxvirt QEMU[191514]: IDT=     fffff80000b95080 00000fff
+Apr 20 10:33:47 pxvirt QEMU[191514]: CR0=80050031 CR2=fffff9800233e000 CR3=0000000000187000 CR4=000406f8
+Apr 20 10:33:47 pxvirt QEMU[191514]: DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000
+Apr 20 10:33:47 pxvirt QEMU[191514]: DR6=00000000ffff0ff0 DR7=0000000000000400
+Apr 20 10:33:47 pxvirt QEMU[191514]: EFER=0000000000000d01
+Apr 20 10:33:47 pxvirt QEMU[191514]: Code=25 a8 4b 00 00 b9 70 00 00 40 0f ba 32 00 72 06 33 c0 8b d0 <0f> 30 5a 58 59 c3 90 90 90 90 90 90 90 90 90 90 90 90 90 90 cc cc cc cc cc cc 66 66 0f 1f
+--
+```
+If the following key log entries are present, you have hit this bug:
+```
+extra data[0]: 0x000000008000001f
+extra data[1]: 0x0000000000000020
+RCX=0000000040000070
+Code=25 a8 4b 00 00 b9 70 00 00 40 0f ba 32 00 72 06 33 c0 8b d0
+```
+
+## Solutions
+
+Use one or more of the following methods:
+
+1. Upgrade the CPU microcode
+    ```
+    apt update && apt install -y intel-microcode
+    ```
+    Then reboot the host.
+2. Update Windows 7 to a newer version.
+3. Change the VM OS type to Linux.
+4. Use an OVMF virtual machine.

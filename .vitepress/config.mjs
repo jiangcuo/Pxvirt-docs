@@ -91,6 +91,8 @@ const zhSidebar = [
           {text: 'passthrough', link: '/zh/case/issue/passthrough'},
           {text: 'arm32', link: '/zh/case/issue/armhf'},
           {text: 'ipv6', link: '/zh/case/issue/ipv6'},
+          {text: 'win7内部错误', link: '/zh/case/issue/win7-internal-error-hv_vapic'},
+
         ]
       },
     ]
@@ -167,6 +169,8 @@ const enSidebar = [
           {text: 'passthrough', link: '/en/case/issue/passthrough'},
           {text: 'arm 32', link: '/en/case/issue/armhf'},
           {text: 'ipv6', link: '/en/case/issue/ipv6'},
+          {text: 'win7 internal error', link: '/en/case/issue/win7-internal-error-hv_vapic'},
+
         ]
       },
     ]
