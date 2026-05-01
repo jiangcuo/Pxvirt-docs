@@ -92,7 +92,7 @@ const zhSidebar = [
           {text: 'arm32', link: '/zh/case/issue/armhf'},
           {text: 'ipv6', link: '/zh/case/issue/ipv6'},
           {text: 'win7内部错误', link: '/zh/case/issue/win7-internal-error-hv_vapic'},
-
+          {text: 'MSIx PBA outside of specified BAR', link: '/zh/case/issue/MSIx-PBA-outside-of-specified-BAR'},
         ]
       },
     ]
@@ -170,6 +170,7 @@ const enSidebar = [
           {text: 'arm 32', link: '/en/case/issue/armhf'},
           {text: 'ipv6', link: '/en/case/issue/ipv6'},
           {text: 'win7 internal error', link: '/en/case/issue/win7-internal-error-hv_vapic'},
+          {text: 'MSIx PBA outside of specified BAR', link: '/en/case/issue/MSIx-PBA-outside-of-specified-BAR'},
 
         ]
       },
