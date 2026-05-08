@@ -84,6 +84,12 @@ const zhSidebar = [
       },
       { text: 'eNFS', link: '/zh/case/enfs'},
       { text: 'SPDK', link: '/zh/case/spdk'},
+      { text: 'CVE', 
+        items: [
+          {text: 'CVE-2026-31431', link: '/zh/case/cve/CVE-2026-31431'},
+          {text: 'DirtyFrag', link: '/zh/case/cve/dirtyfrag'},
+        ]
+      },
       { text: 'Issues',
         items: [
           {text: 'rockchip', link: '/zh/case/issue/rockchip'},
@@ -162,6 +168,12 @@ const enSidebar = [
       },
       { text: 'eNFS', link: '/en/case/enfs'},
       { text: 'SPDK', link: '/en/case/spdk'},
+      { text: 'CVE', 
+        items: [
+          {text: 'CVE-2026-31431', link: '/zh/case/cve/CVE-2026-31431'},
+          {text: 'DirtyFrag', link: '/zh/case/cve/dirtyfrag'},
+        ]
+      },
       { text: 'Issues',
         items: [
           {text: 'rockchip', link: '/en/case/issue/rockchip'},
