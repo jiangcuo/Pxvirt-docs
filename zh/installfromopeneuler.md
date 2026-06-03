@@ -67,10 +67,10 @@ proxmox-ve的服务需要利用hostname解析ip地址。我们需要配置正确
 sudo tee /etc/yum.repos.d/pxvirt.repo > /dev/null <<'EOF'
 [pxvirt]
 name=Lierfang PxVirt Repo
-baseurl=http://ah1.mirrors.lierfang.com:8000/pxcloud/pxvirt/repo/openeuler/24.03/$basearch
+baseurl=https://ah1.mirrors.lierfang.com:8000/pxcloud/pxvirt/repo/openeuler/24.03/$basearch
 enabled=1
 gpgcheck=1
-gpgkey=http://ah1.mirrors.lierfang.com:8000/pxcloud/lierfang.gpg
+gpgkey=https://ah1.mirrors.lierfang.com:8000/pxcloud/lierfang.gpg
 username=testuser
 password=testusertestuser
 EOF
