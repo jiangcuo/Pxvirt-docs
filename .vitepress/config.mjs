@@ -40,6 +40,7 @@ const zhSidebar = [
         items: [
           { text: '从ISO安装', link: '/zh/install' },
           { text: '从debian安装', link: '/zh/installfromdebian' },
+          { text: '从openeuler安装', link: '/zh/installfromopeneuler' },
         ]
       },
       { text: '初次使用',
@@ -101,6 +102,8 @@ const zhSidebar = [
           {text: 'MSIx PBA outside of specified BAR', link: '/zh/case/issue/MSIx-PBA-outside-of-specified-BAR'},
         ]
       },
+      { text: 'proxmox-memory',link: '/zh/case/proxmox-memory'},
+
     ]
   }
 ]
@@ -186,6 +189,8 @@ const enSidebar = [
 
         ]
       },
+      { text: 'proxmox-memory',link: '/en/case/proxmox-memory'},
+
     ]
   }
 ]
@@ -269,7 +274,11 @@ export default defineConfig({
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    ],
+    outline: {
+      level: [2, 4],
+      label: 'Menu'
+    },
   },
   locales: {
     root: {
