@@ -40,6 +40,12 @@ selinux为关闭状态
 Disabled
 [root@pxvirt ~]#
 ```
+### 关闭防火墙
+
+```bash
+systemctl stop firewalld
+systemctl disable firewalld
+```
 
 ### 修改主机名
 
@@ -84,7 +90,7 @@ EOF
 
 ```bash
 dnf makecache
-dnf install pxvirt
+dnf install pxvirt libknet1-crypto-nss-plugin ceph -y
 ```
 
 出现如下
