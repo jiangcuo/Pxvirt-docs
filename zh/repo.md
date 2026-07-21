@@ -1,5 +1,6 @@
 # 软件仓库
 
+## Debian 系列仓库地址
 PXVIRT 8.3版本使用`debian 12 bookworm`发行。
 
 软件源GPG签名
@@ -37,14 +38,14 @@ Ceph-17
 deb https://mirrors.lierfang.com/pxcloud/pxvirt bookworm ceph-quincy
 ```
 
-## Proxmox backup server 仓库
+### Proxmox backup server 仓库
 
 
 ```
 deb https://mirrors.lierfang.com/pxcloud/pbs trixie main
 ```
 
-## LoongARCH 特殊的debian仓库
+### LoongARCH 特殊的debian仓库
 
 因为loongarch 现在还没有debian的正式版本，存在于sid中，我们对其进行了冻结，我们的包都是基于这个版本，因此需要使用我们的仓库debian仓库。
 
@@ -60,6 +61,19 @@ pxvirt 9
 deb [trusted=yes check-valid-until=no] https://mirrors.lierfang.com/debian-ports/trixie/ sid main
 ```
 
+## OpenEuler系列仓库地址
+
+pxvirt 8
+
+```
+[pxvirt]
+name=Lierfang PxVirt Repo
+baseurl=https://mirrors.lierfang.com/pxcloud/pxvirt/repo/openeuler/24.03/$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://mirrors.lierfang.com/pxcloud/lierfang.gpg
+```
+
 
 ## 仓库镜像
 
@@ -69,7 +83,7 @@ deb [trusted=yes check-valid-until=no] https://mirrors.lierfang.com/debian-ports
     - https://mirrors.lierfang.com
     - https://us.mirrors.lierfang.com
     - https://jp.mirrors.lierfang.com
-    - https://ah1.cdn.lierfang.com:8000
+    - https://cn.mirrors.lierfang.com
 
 2. 社区镜像
     
