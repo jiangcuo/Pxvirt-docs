@@ -75,6 +75,7 @@ const zhSidebar = [
         items: [
           {text: '1. 部署', link: '/zh/case/ceph/deploy'},
           {text: '2. 运维', link: '/zh/case/ceph/maintenance'},
+          {text: '3. RDMA', link: '/zh/case/ceph/rdma'},
         ]
       },
       { text: 'vGPU',
@@ -127,6 +128,8 @@ const enSidebar = [
         items: [
           { text: 'Install from ISO', link: '/en/install' },
           { text: 'Install from Debian', link: '/en/installfromdebian' },
+          { text: 'Install from openeuler', link: '/en/installfromopeneuler' },
+
         ]
       },
       { text: 'First Time Setup',
@@ -161,6 +164,7 @@ const enSidebar = [
         items: [
           {text: '1. Deployment', link: '/en/case/ceph/deploy'},
           {text: '2. Maintenance', link: '/en/case/ceph/maintenance'},
+          {text: '3. RDMA', link: '/en/case/ceph/rdma'},
         ]
       },
       { text: 'vGPU',
@@ -173,8 +177,8 @@ const enSidebar = [
       { text: 'SPDK', link: '/en/case/spdk'},
       { text: 'CVE', 
         items: [
-          {text: 'CVE-2026-31431', link: '/zh/case/cve/CVE-2026-31431'},
-          {text: 'DirtyFrag', link: '/zh/case/cve/dirtyfrag'},
+          {text: 'CVE-2026-31431', link: '/en/case/cve/CVE-2026-31431'},
+          {text: 'DirtyFrag', link: '/en/case/cve/dirtyfrag'},
         ]
       },
       { text: 'Issues',

@@ -1,30 +1,30 @@
-# 从openeuler 中安装pxvirt
+# Installing PxVirt from openEuler
 
-Pxvirt 支持从rhel系列的系统安装，以openeuler 24.03 为底座，支持麒麟v11、麒麟信安9等新版本的服务器操作系统
+PxVirt supports installation on RHEL-family systems, built on top of openEuler 24.03. This also supports newer server operating systems such as Kylin V11 and Kylin Xin'an 9.
 
-## 系统准备
+## System preparation
 
-### 关闭selinux
+### Disable SELinux
 
 ```bash
 echo "SELINUX=disabled" > /etc/selinux/config
 ```
 
-### 启用apparmor
+### Enable AppArmor
 
 ```bash
 vi /etc/default/grub
 ```
 
-在`GRUB_CMDLINE_LINUX`行，修改`apparmor=0`改成`apparmor=1`
+On the `GRUB_CMDLINE_LINUX` line, change `apparmor=0` to `apparmor=1`.
 
-随后更新grub
+Then update grub:
 
 ```bash
 grub2-mkconfig -o /boot/efi/EFI/openEuler/grub.cfg
 ```
 
-之后可以重启验证，如下面apparmor是1 启用状态
+After that, you can reboot and verify — AppArmor should show as enabled (`apparmor=1`) below:
 
 ```bash
 [root@pxvirt ~]# cat /proc/cmdline
@@ -33,27 +33,27 @@ BOOT_IMAGE=/vmlinuz-6.6.0-132.0.0.111.oe2403sp3.aarch64 root=/dev/mapper/openeul
 
 ```
 
-selinux为关闭状态
+SELinux should be disabled:
 
 ```bash
 [root@pxvirt ~]# getenforce
 Disabled
 [root@pxvirt ~]#
 ```
-### 关闭防火墙
+### Disable the firewall
 
 ```bash
 systemctl stop firewalld
 systemctl disable firewalld
 ```
 
-### 修改主机名
+### Set the hostname
 
-proxmox-ve的服务需要利用hostname解析ip地址。我们需要配置正确的主机名
+Proxmox VE services rely on the hostname to resolve the IP address, so you need to configure the correct hostname.
 
-假设你当前的ip为10.10.10.10，hostname为pxvirt
+Assume your current IP is 10.10.10.10 and the hostname is pxvirt.
 
-修改/etc/hosts文件
+Edit the `/etc/hosts` file:
 
 ```bash# Loopback entries; do not change.
 # For historical reasons, localhost precedes localhost.localdomain:
@@ -65,9 +65,9 @@ proxmox-ve的服务需要利用hostname解析ip地址。我们需要配置正确
 10.10.10.10 pxvirt.local pxvirt
 ```
 
-## 安装Pxvirt
+## Install PxVirt
 
-### 配置Pxvirt 软件源
+### Configure the PxVirt package repository
 
 ```bash
 sudo tee /etc/yum.repos.d/pxvirt.repo > /dev/null <<'EOF'
@@ -80,18 +80,18 @@ gpgkey=https://mirrors.lierfang.com/pxcloud/lierfang.gpg
 EOF
 ```
 
-请将username 和password 改成属于我们提供的账号密码
+Please replace username and password with the account credentials we provided you.
 
-### 安装Pxvirt
+### Install PxVirt
 
-执行
+Run:
 
 ```bash
 dnf makecache
 dnf install pxvirt libknet1-crypto-nss-plugin ceph -y
 ```
 
-出现如下
+You should see output like this:
 
 ```bash
 [root@pxvirt ~]# dnf makecache
@@ -137,19 +137,19 @@ Installing dependencies:
  fonts-font-awesome                 noarch         4.7.0-1
 ```
 
-### 配置网桥网络
+### Configure the bridge network
 
-修改网络之前，请确保你能通过ipmi访问或者能够有显示器连接到物理机。
+Before changing the network configuration, make sure you have IPMI access or a monitor connected to the physical machine.
 
-现在Web UI 上配置网络，点击应用
+Now configure the network in the Web UI and click Apply.
 
-### 禁用NetworkManager
+### Disable NetworkManager
 
-pve使用`ifupdown2`来进行网络配置，rhel系列系统一般模式安装了`NetworkManager`，因此我们需要禁用其服务。
+PVE uses `ifupdown2` for network configuration. RHEL-family systems typically install `NetworkManager` by default, so we need to disable that service.
 
 ```bash
 systemctl disable NetworkManager
 systemctl stop NetworkManager
 ```
 
-重启主机即可！
+Then reboot the host!
