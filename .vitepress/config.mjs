@@ -104,7 +104,7 @@ const zhSidebar = [
         ]
       },
       { text: 'proxmox-memory',link: '/zh/case/proxmox-memory'},
-
+      { text: '源码',link: '/zh/source'},
     ]
   }
 ]
